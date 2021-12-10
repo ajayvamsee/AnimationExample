@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="3000">
+        <KeyFrameSet>
+            <KeyPosition
+                motion:framePosition="0"
+                motion:keyPositionType="deltaRelative"
+                motion:motionTarget="@+id/textView" />
+            <KeyPosition
+                motion:framePosition="1"
+                motion:keyPositionType="deltaRelative"
+                motion:motionTarget="@+id/textView" />
+            <KeyPosition
+                motion:framePosition="2"
+                motion:keyPositionType="deltaRelative"
+                motion:motionTarget="@+id/textView" />
+            <KeyPosition
+                motion:framePosition="3"
+                motion:keyPositionType="deltaRelative"
+                motion:motionTarget="@+id/textView" />
+            <KeyPosition
+                motion:framePosition="99"
+                motion:keyPositionType="deltaRelative"
+                motion:motionTarget="@+id/textView" />
+            <KeyAttribute
+                android:alpha="0.0"
+                android:scaleX="2.0"
+                android:scaleY="2.0"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/textView" />
+            <KeyAttribute
+                android:alpha="0.4"
+                motion:framePosition="1"
+                motion:motionTarget="@+id/textView" />
+            <KeyAttribute
+                android:scaleX="1.0"
+                android:scaleY="1.0"
+                motion:framePosition="99"
+                motion:motionTarget="@+id/textView" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:transitionEasing="linear" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.943"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.931" />
+    </ConstraintSet>
+</MotionScene>

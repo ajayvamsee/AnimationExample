@@ -1,0 +1,34 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_bottomsheetlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BottomSheetBehavior Layout"
+            android:textAllCaps="false"
+            android:padding="16dp"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/button_bottomsheetfragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_margin="8dp"
+            android:text="BottomSheetDialogFragment"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
